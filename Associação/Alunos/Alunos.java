@@ -1,11 +1,11 @@
-public class Aluno 
+public class Alunos 
 {
     private String nome;
     private int matricula;
     private int ano;
     private Curso curso;
 
-    public Aluno(String nome, int matricula, int ano, Curso curso) 
+    public Alunos(String nome, int matricula, int ano, Curso curso) 
     {
         this.nome = nome;
         this.matricula = matricula;

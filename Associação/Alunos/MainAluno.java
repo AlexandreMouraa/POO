@@ -11,8 +11,8 @@ public class MainAluno
         Curso curso2 = new Curso("Engenharia Elétrica", "EE", dep2);
 
         // Criando os alunos
-        Aluno aluno1 = new Aluno("João", 001, 2020, curso1);
-        Aluno aluno2 = new Aluno("Maria", 002, 2020, curso2);
+        Alunos aluno1 = new Alunos("João", 001, 2020, curso1);
+        Alunos aluno2 = new Alunos("Maria", 002, 2020, curso2);
 
         // Mostrando as instâncias
         System.out.println(dep1);

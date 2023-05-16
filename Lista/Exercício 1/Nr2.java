@@ -1,3 +1,5 @@
-public class Nr2 {
+public class Nr2 
+{
+    
 
 }

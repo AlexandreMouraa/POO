@@ -1,5 +1,6 @@
 import javax.swing.JOptionPane;
-public class Main {
+public class MainProdutos 
+{
 
     public static void main(String [] args)
     {

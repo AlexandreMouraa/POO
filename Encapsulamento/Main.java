@@ -30,6 +30,8 @@ public class Main
 
             cursos[i] = new Cursos(nome, area, duracao, numeroDeAlunos);
         }
+        
+        sc.close();
 
         System.out.println("Dados dos cursos: ");
 

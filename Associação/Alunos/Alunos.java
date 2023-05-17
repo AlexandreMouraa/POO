@@ -3,9 +3,9 @@ public class Alunos
     private String nome;
     private int matricula;
     private int ano;
-    private Curso curso;
+    private Cursoss curso;
 
-    public Alunos(String nome, int matricula, int ano, Curso curso) 
+    public Alunos(String nome, int matricula, int ano, Cursoss curso) 
     {
         this.nome = nome;
         this.matricula = matricula;
@@ -19,13 +19,13 @@ public class Alunos
     }
 }
 
-class Curso 
+class Cursoss 
 {
     private String nome;
     private String sigla;
     private Departamento departamento;
 
-    public Curso(String nome, String sigla, Departamento departamento) 
+    public Cursoss(String nome, String sigla, Departamento departamento) 
     {
         this.nome = nome;
         this.sigla = sigla;

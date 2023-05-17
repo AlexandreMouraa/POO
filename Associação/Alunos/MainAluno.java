@@ -7,8 +7,8 @@ public class MainAluno
         Departamento dep2 = new Departamento("Departamento de Engenharia Elétrica", "DEE");
 
         // Criando os cursos
-        Curso curso1 = new Curso("Ciência da Computação", "CC", dep1);
-        Curso curso2 = new Curso("Engenharia Elétrica", "EE", dep2);
+        Cursoss curso1 = new Cursoss("Ciência da Computação", "CC", dep1);
+        Cursoss curso2 = new Cursoss("Engenharia Elétrica", "EE", dep2);
 
         // Criando os alunos
         Alunos aluno1 = new Alunos("João", 001, 2020, curso1);

@@ -33,6 +33,8 @@ public class Ex3_Lab1
             curso[i] = new Curso(nome, area, duracao, numerodeAlunos);
         }
 
+        sc.close();
+
         System.out.println("Dados dos cursos: ");
 
         for(Curso cursos : curso)

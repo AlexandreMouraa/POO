@@ -1,6 +1,6 @@
 //Given an array of integers, find the one that appears an odd number of times.
 //There will always be only one integer that appears an odd number of times.
-
+import java.util.TreeSet;
 //First Solution
 public class FindOdd 
 {
@@ -42,8 +42,6 @@ class FindOddD
 
 //Third Solution
 
-//At this one is necessary the use of this import bellow
-//import java.util.TreeSet;
 
 class FindOdds 
 {

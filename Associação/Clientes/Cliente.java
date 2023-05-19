@@ -2,9 +2,9 @@ public class Cliente
 {
     private String nome;
     private String cpf;
-    private Endereco endereco;
+    private Enderecoo endereco;
 
-    public Cliente(String nome, String cpf, Endereco endereco) 
+    public Cliente(String nome, String cpf, Enderecoo endereco) 
     {
         this.nome = nome;
         this.cpf = cpf;
@@ -21,7 +21,7 @@ public class Cliente
         return cpf;
     }
 
-    public Endereco getEndereco() 
+    public Enderecoo getEndereco() 
     {
         return endereco;
     }
@@ -37,7 +37,7 @@ public class Cliente
     }
 }
 
-class Endereco 
+class Enderecoo
 {
     private String rua;
     private int numero;
@@ -47,7 +47,7 @@ class Endereco
     private String cidade;
     private String estado;
 
-    public Endereco(String rua, int numero, String complemento, String cep, String bairro, String cidade, String estado) 
+    public Enderecoo(String rua, int numero, String complemento, String cep, String bairro, String cidade, String estado) 
     {
         this.rua = rua;
         this.numero = numero;

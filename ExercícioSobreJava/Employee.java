@@ -1,3 +1,5 @@
+import java.util.HashSet;
+import java.util.Set;
 /*(Pquena)Lista de exercícios que abrangem os conceitos de encapsulamento, herança e polimorfismo em Java:
 
 1 - Crie uma classe chamada Pessoa com os seguintes atributos privados: nome, idade e endereco. Implemente os métodos de acesso (getters) e de modificação (setters) para esses atributos.
@@ -186,6 +188,8 @@ class Pato extends Animal
     }
 }
 
+//Questoes 6 e 7
+
 class Forma
 {
     public double calcularArea(double valor)
@@ -206,18 +210,152 @@ class Circulo extends Forma
 class Triangulo extends Forma
 {
     
-    public double calcularAreaTriangulo(int value)
+    public double calcularAreaTriangulo(int base, int altura)
     {
-        return super.calcularArea(3.14) * Math.pow(value, 2);
+        return super.calcularArea(2)/ base * altura;
     }
 }
 
 class Quadrado extends Forma
 {
     
-    public double calcularAreaQuadrado(int value)
+    public double calcularAreaQuadrado()
     {
-        return super.calcularArea(3.14)* Math.pow(value, 2);
+        return Math.pow(super.calcularArea(3.14), 2);
     }
 }
+
+//Questoes 8 e 9
+class Veiculoooo
+{
+    private String marca;
+    private String modelo;
+    private int ano;
+
+    public Veiculoooo(String marca, String modelo, int ano)
+    {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano= ano;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+}
+
+class Carrooooo extends Veiculoooo
+{
+
+    private int numerodePortas;
+
+    public Carrooooo(String marca, String modelo, int ano, int numerodePortas)
+    {
+        super(marca, modelo, ano);
+        this.numerodePortas = numerodePortas;
+    }
+
+    public int numerodePortas(int value)
+    {
+        return value;
+    }
+}
+
+class Motoooooo extends Veiculoooo
+{
+    private int cilindrada;
+
+    Motoooooo(String marca, String modelo, int ano, int cilindrada)
+    {
+        super(marca, modelo, ano);
+        this.cilindrada = cilindrada;
+    }
+
+    public String toString()
+    {
+        return "A cilindrada da moto é :" + cilindrada;
+    }
+
+    public int getCilindrada() {
+        return cilindrada;
+    }
+
+    public void setCilindrada(int cilindrada) {
+        this.cilindrada = cilindrada;
+    }
+}
+
+//Pausa para um exercício do Leetcode
+class Solution {
+
+    public char nextGreatestLetter(char[] letters, char target) 
+    {
+
+        for(int i = 0; i < letters.length; i++)
+        {
+            if(letters[i] > target)
+                return letters[i];
+        }
+        return letters[0];
+    }
+}
+
+//Outro exercício do LeetCode
+//Given a string s, find the length of the longest 
+//substring
+//without repeating characters.
+//abcabcbb
+
+class Solutionn {
+    public int lengthOfLongestSubstring(String s) {
+        Set<Character> uniqueChars = new HashSet<>();
+        int maxLength = 0;
+        int i = 0;
+        int j = 0;
+
+        //Could have used two nestled for's
+        while (j < s.length()) {
+            if (!uniqueChars.contains(s.charAt(j))) {
+                uniqueChars.add(s.charAt(j));
+                maxLength = Math.max(maxLength, j - i + 1);
+                j++;
+            } else {
+                uniqueChars.remove(s.charAt(i));
+                i++;
+            }
+        }
+
+        return maxLength;
+    }
+}
+
+//EXPLAINING THE SET AND HASHSET
+//Set<Character>: This declares a variable named caracteres with a type of Set<Character>. 
+//It means that caracteres will be a set that stores Character objects.
+//new HashSet<>(): This creates a new instance of a HashSet object. 
+//HashSet is a class that implements the Set interface in Java. 
+//It represents an unordered collection of unique elements. 
+//By using new HashSet<>(), we are creating a new empty HashSet object.
+//caracteres = ...: This assigns the newly created HashSet object to the variable caracteres. 
+//Now, caracteres references the HashSet object, and we can perform set operations on it.
 

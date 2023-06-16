@@ -18,16 +18,23 @@ public class ValidParentheses
         Brackets.put('{', '}');
         Brackets.put('(', ')');
 
+        char expectedClosing = ' ';
+
         for(char letra : s.toCharArray())
         {
+            //If it's an opening bracket, update the expected closing bracket
             if(Brackets.containsKey(letra))
+                expectedClosing = Brackets.get(letra);
+            
+            else if(Brackets.containsValue(letra))
             {
-                
+                if(expectedClosing == ' ' || expectedClosing != letra) return false;
+
+                expectedClosing = ' ';
             }
         }
-        
 
-        return false;   
+        return expectedClosing == ' ';   
     }
 }
 

@@ -1,37 +1,49 @@
-import java.util.HashSet;
-import java.util.Set;
-
 public class LongestPalindromeSub 
 {
     public String longestPalindrome(String s) 
     {
-        Set<Character> LongestPalindrome = new HashSet<>();
 
-        int cont = 0;
-        int right = s.length();
+        if(s.length() < 2 || s == null)
+            return s;
+
+        int start = 0;
+        int end = 0;
 
         for(int i = 0; i < s.length(); i++)
         {
-            if(!LongestPalindrome.contains(s.charAt(i)))
-                LongestPalindrome.add(s.charAt(i));
-            else
+            int len1 = Mapping(s, i, i);
+            int len2 = Mapping(s, i, i + 1);
+            int len = Math.max(len1, len2);
+
+            if(len > end - start)
             {
-                Math.max(cont, Mapping(s.charAt(i), right).length());
+                start = i - ((len - 1)/ 2);
+                end = i + (len/2);
             }
         }
 
-        return "";
+        return s.substring(start, end + 1);
     }
 
-
-    private String Mapping(char Letter, int size)
+    private int Mapping(String s, int left, int right)
     {
 
-        for(int i = size; i >= 0; i--)
-        {
+        if(s == null ||  left > right)
+            return 0;
 
+        while(left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right))
+        {
+            left--;
+            right++;
         }
 
-        return "";
+        return right - left - 1;
+    }
+
+    public static void main(String [] args)
+    {
+        var Solution = new LongestPalindromeSub();
+        String word = "abbc";
+        System.out.println(Solution.longestPalindrome(word));
     }
 }

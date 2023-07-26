@@ -1,3 +1,5 @@
+//Singleton
+
 public class BancoDados
 {
     private String nome;

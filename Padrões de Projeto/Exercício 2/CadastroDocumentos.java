@@ -1,3 +1,5 @@
+//Factory Method
+
 // Classe abstrata Documento
 abstract class Documento 
 {

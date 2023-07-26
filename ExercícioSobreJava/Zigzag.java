@@ -8,7 +8,7 @@ public class Zigzag
       for(int i = 0; i < numRows; i++)
               sb[i] = new StringBuilder();
 
-      char [] array = s.toCharArray();
+      char [] array = s.toCharArray();    
       int n = array.length;
       int index = 0;
 
